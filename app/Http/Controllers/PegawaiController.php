@@ -21,6 +21,7 @@ class PegawaiController extends Controller
     {
         //$fetchUsers = User::with('hasOnePegawai')->where('id', '!=', 1)->get();
 
+
         $fetchUsers = Pegawai::with('hasUser', 'hasJabatan', 'hasUnitKerja', 'hasLembaga')
             ->where('user_id', '!=', 1)
             ->where('user_id', '!=', 2)
@@ -99,6 +100,8 @@ class PegawaiController extends Controller
      */
     public function update(Request $request, $id)
     {
+
+
 
         $this->validate(
             $request,

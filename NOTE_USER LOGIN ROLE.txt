@@ -1,0 +1,21 @@
+akun login
+
+//Role super-admin
+email => rraharjo.rudy@dev.kemendagri.go.id
+password => secret
+
+//Role Eselon 2
+email => rudy.admin.eselon2@kemendagri.go.id
+password => secret
+
+//Role Eselon 3
+email => rudy.admin.eselon3@kemendagri.go.id
+password => secret
+
+//Role Eselon 4
+email => rudy.admin.eselon4@kemendagri.go.id
+password => secret
+
+//Role Eselon Staff
+email => rudy.admin.staff@kemendagri.go.id
+password => secret
