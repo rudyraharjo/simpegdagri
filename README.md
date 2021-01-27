@@ -29,3 +29,7 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 - php artisan config:clear / clear all cache with artisan laravel
 - php artisan key:generate
 - php artisan migrate:fresh --seed
+
+## Login
+email : check in Database/Seeders/UserTableSeeder or check in table users when you success installain 
+password : secret

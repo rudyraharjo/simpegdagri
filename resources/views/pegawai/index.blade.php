@@ -37,7 +37,9 @@
                                     <th>Jabatan</th>
                                     <th>Unit Kerja</th>
                                     <th>Lembaga</th>
+                                    @if(auth()->user()->can('Update Lembaga') || auth()->user()->can('Delete Lembaga'))
                                     <th style="width: 150px">Aksi</th>
+                                    @endif
                                 </tr>
                             </thead>
                             <tbody>
@@ -61,10 +63,12 @@
                                     <td>{{ $jabatan }}</td>
                                     <td>{{ $UnitKerja }}</td>
                                     <td>{{ $lembaga }}</td>
+                                    @if(auth()->user()->can('Update Lembaga') || auth()->user()->can('Delete Lembaga'))
                                     <td>
 
                                         <a href="{{ url('/pegawai/'.$value->id.'/edit') }}" class="text-sm text-gray-700 underline">Edit</a> | <a href="{{ url('/pegawai/'.$value->id.'/delete') }}" class="text-sm text-gray-700 underline">Delete</a>
                                     </td>
+                                    @endif
                                 </tr>
                                 @php
                                 $i++

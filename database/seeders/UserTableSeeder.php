@@ -294,5 +294,26 @@ class UserTableSeeder extends Seeder
             'password' => bcrypt('secret'),
             'token' => sha1(time())
         ])->assignRole('Eselon 2');
+
+        // ID = 36 role = eselon 3
+        \App\Models\User::create([
+            'email' => 'rudy.admin.eselon3@kemendagri.go.id',
+            'password' => bcrypt('secret'),
+            'token' => sha1(time())
+        ])->assignRole('Eselon 3');
+
+        // ID = 37 Role = eselon 4
+        \App\Models\User::create([
+            'email' => 'rudy.admin.eselon4@kemendagri.go.id',
+            'password' => bcrypt('secret'),
+            'token' => sha1(time())
+        ])->assignRole('Eselon 4');
+
+        // ID = 38 Role = staff user
+        \App\Models\User::create([
+            'email' => 'rudy.admin.staff@kemendagri.go.id',
+            'password' => bcrypt('secret'),
+            'token' => sha1(time())
+        ])->assignRole('Eselon Staff');
     }
 }

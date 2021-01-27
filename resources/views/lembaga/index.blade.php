@@ -32,11 +32,13 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th style="width: 50px">#</th>
-                                    <th style="width: 200px">Unit Kerja</th>
-                                    <th style="width: 200px">Lembaga</th>
+                                    <th>#</th>
+                                    <th>Unit Kerja</th>
+                                    <th>Lembaga</th>
                                     <th>Ketua</th>
-                                    <th style="width: 90px">Aksi</th>
+                                    @if(auth()->user()->can('Update Lembaga') || auth()->user()->can('Delete Lembaga'))
+                                    <th>Aksi</th>
+                                    @endif
                                 </tr>
                             </thead>
                             <tbody>
@@ -50,14 +52,16 @@
                                 $ketua = isset($lembaga[$key]["hasKepalaLembaga"]["fullname"]) ? $lembaga[$key]["hasKepalaLembaga"]["fullname"] : "-";
                                 @endphp
                                 <tr>
-                                    <td style="width: 100px;">{{ $i}}</td>
+                                    <td>{{ $i}}</td>
                                     <td>{{ $unitKerja }}</td>
                                     <td>{{ $value->name }}</td>
                                     <td>{{ $ketua }}</td>
+                                    @if(auth()->user()->can('Update Lembaga') || auth()->user()->can('Delete Lembaga'))
                                     <td>
 
                                         <a href="{{ url('/lembaga/'.$value->id.'/edit') }}" class="text-sm text-gray-700 underline">Edit</a> | <a href="{{ url('/lembaga/'.$value->id.'/delete') }}" class="text-sm text-gray-700 underline">Delete</a>
                                     </td>
+                                    @endif
                                 </tr>
                                 @php
                                 $i++
